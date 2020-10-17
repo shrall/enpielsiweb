@@ -464,3 +464,10 @@ $(".backBtn").click(function () {
     $(".submitBtn").css("visibility", "hidden");
   }, 600);
 });
+
+$('select[name="category"]').change(function () {
+  if ($(this).val() == "katsatu")
+    $(".memberdua, .membertiga").prop('required',false);
+  if ($(this).val() == "katdua")
+    $(".memberdua, .membertiga").prop('required',true);
+});
