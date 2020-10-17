@@ -377,6 +377,11 @@ jQuery(document).ready(function ($) {
 });
 
 $(".nextBtn").click(function () {
+  $(".ruleContainer").stop();
+  $(".nextBtn").stop();
+  $(".formContainer").stop();
+  $(".backBtn").stop();
+  $(".submitBtn").stop();
   $(".backBtn").css("visibility", "visible");
   $(".submitBtn").css("visibility", "visible");
   $(".formContainer").css("visibility", "visible");
@@ -421,6 +426,11 @@ $(".nextBtn").click(function () {
   }, 600);
 });
 $(".backBtn").click(function () {
+  $(".ruleContainer").stop();
+  $(".nextBtn").stop();
+  $(".formContainer").stop();
+  $(".backBtn").stop();
+  $(".submitBtn").stop();
   $(".ruleContainer").css("visibility", "visible");
   $(".nextBtn").css("visibility", "visible");
   $(".ruleContainer").animate(
