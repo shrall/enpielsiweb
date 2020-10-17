@@ -4,10 +4,6 @@ $teamname = $_POST['teamname'];
 $category = $_POST['category'];
 
 
-if ($category == "katdua") {
-    $secondmembergender = $_POST['secondmembergender'];
-    $thirdmembergender = $_POST['thirdmembergender'];
-}
 $coachname = $_POST['coachname'];
 $coachphone = $_POST['coachphone'];
 $schoolname = $_POST['schoolname'];
@@ -23,19 +19,16 @@ $secondmembername = $_POST['secondmembername'];
 $secondmemberemail = $_POST['secondmemberemail'];
 $secondmemberaddress = $_POST['secondmemberaddress'];
 $secondmemberphone = $_POST['secondmemberphone'];
+$secondmembergender = $_POST['secondmembergender'] ?? '';
 $thirdmembername = $_POST['thirdmembername'];
 $thirdmemberemail = $_POST['thirdmemberemail'];
 $thirdmemberaddress = $_POST['thirdmemberaddress'];
 $thirdmemberphone = $_POST['thirdmemberphone'];
+$thirdmembergender = $_POST['thirdmembergender'] ?? '';
 
 try {
-    if ($category == "katdua") {
-        $sql = $db->prepare("INSERT INTO formresult (teamname, category,coachname,coachphone,schoolname,schoolcity,schooladdress,schoolphone,firstmembername,firstmemberemail,firstmemberaddress,firstmemberphone,firstmembergender,secondmembername,secondmemberemail,secondmemberaddress,secondmemberphone,secondmembergender,thirdmembername,thirdmemberemail,thirdmemberaddress,thirdmemberphone,thirdmembergender) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?)");
-        $sql->execute(array($teamname, $category, $coachname, $coachphone, $schoolname, $schoolcity, $schooladdress, $schoolphone, $firstmembername, $firstmemberemail, $firstmemberaddress, $firstmemberphone, $firstmembergender, $secondmembername, $secondmemberemail, $secondmemberaddress, $secondmemberphone, $secondmembergender, $thirdmembername, $thirdmemberemail, $thirdmemberaddress, $thirdmemberphone, $thirdmembergender));
-    } else {
-        $sql = $db->prepare("INSERT INTO formresult (teamname, category,coachname,coachphone,schoolname,schoolcity,schooladdress,schoolphone,firstmembername,firstmemberemail,firstmemberaddress,firstmemberphone,firstmembergender) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?)");
-        $sql->execute(array($teamname, $category, $coachname, $coachphone, $schoolname, $schoolcity, $schooladdress, $schoolphone, $firstmembername, $firstmemberemail, $firstmemberaddress, $firstmemberphone, $firstmembergender));
-    }
+    $sql = $db->prepare("INSERT INTO formresult (teamname, category,coachname,coachphone,schoolname,schoolcity,schooladdress,schoolphone,firstmembername,firstmemberemail,firstmemberaddress,firstmemberphone,firstmembergender,secondmembername,secondmemberemail,secondmemberaddress,secondmemberphone,secondmembergender,thirdmembername,thirdmemberemail,thirdmemberaddress,thirdmemberphone,thirdmembergender) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?)");
+    $sql->execute(array($teamname, $category, $coachname, $coachphone, $schoolname, $schoolcity, $schooladdress, $schoolphone, $firstmembername, $firstmemberemail, $firstmemberaddress, $firstmemberphone, $firstmembergender, $secondmembername, $secondmemberemail, $secondmemberaddress, $secondmemberphone, $secondmembergender, $thirdmembername, $thirdmemberemail, $thirdmemberaddress, $thirdmemberphone, $thirdmembergender));
     echo "<script>location.href='index.html'</script>";
     echo "<script>alert('Success.')</script>";
 } catch (PDOException $e) {
