@@ -15,11 +15,10 @@ html,body {
 /* SECTION */
 
 .section {
-
 	display:flex;
 	flex-direction: row;
 	width:100%;
-    min-height:100%;
+    min-height:fit-content;
     position: relative;
 }
 

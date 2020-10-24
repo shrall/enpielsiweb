@@ -91,9 +91,6 @@
                     <canvas id="canvas"></canvas>
                     
                   </div> -->
-
-                <!-- <lottie-player src="img/bgsplatter.json" background="transparent" speed="1"
-                    style="width: 300px; height: 300px; z-index:0;" loop controls autoplay></lottie-player> -->
                 <img src="img/fish1.webp" class="display-fish1" data-aos="fade-right" data-aos-duration="3000">
                 <img src="img/fish2.webp" class="display-fish2" data-aos="fade-left" data-aos-duration="1000">
             </div>
@@ -302,16 +299,16 @@
                         </div>
 
                         <div class="col-7">
-                            <div style="max-width: 900px;  margin: 0 auto;" class="space-1"
-                                data-aos="fade-up" data-aos-duration="1000">
-                                <div class="sliderContainer" style="max-width: 900px; width: 115%;">
+                            <div style="max-width: 900px;  margin: 0 auto;" class="space-1" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="sliderContainer" style="max-width: 900px; width: 100%;">
                                     <div><img src="img/toilet.png" style="max-width: 900px;width: 100%; height: auto;">
                                     </div>
                                     <div><img src="img/labfront.png"
                                             style="max-width: 900px;width: 100%; height: auto;">
                                     </div>
                                 </div>
-                                <img src="img/strokestrokeframe.png"
+                                <img src="img/strokeframe.png"
                                     style=" position: absolute;width: 115%;max-width: 1100px;z-index: 0;top:0;left:0">
                             </div>
                         </div>
@@ -327,8 +324,6 @@
         <div class="section gallery">
 
             <div class="overlay-content">
-
-                <img src="img/splatter-bg.png" class="display-splatter" style="opacity: 0.3">
                 <img src="img/bubble.png"
                     style=" position: absolute;max-width: 100%;width: 40px;z-index: 0; bottom: 2vw;right: 10vw;">
                 <img src="img/bubble.png"
@@ -514,7 +509,6 @@
                     </div> -->
                 </div>
                 <div class="formContainer">
-                    <h1>Register</h1>
                     <form action="register.php" id="registrationform" method="POST">
                         <div class="registerTop">
                             <div class="teamInfo formBox">
@@ -566,6 +560,12 @@
                                         <input type="text" name="firstmemberaddress" placeholder="Alamat" required="" />
                                     </div>
                                     <div class="input-group">
+                                        <input type="text" name="firstmembercity" placeholder="Kota" required="" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="firstmemberzip" placeholder="Kode Pos" required="" />
+                                    </div>
+                                    <div class="input-group">
                                         <input type="text" name="firstmemberphone" placeholder="Nomor Telepon"
                                             required="" />
                                     </div>
@@ -581,16 +581,25 @@
                                 <div class="secondMember memberBox">
                                     <h2>1st Member</h2>
                                     <div class="input-group">
-                                        <input type="text" name="secondmembername" placeholder="Nama Anggota" required="" />
+                                        <input type="text" name="secondmembername" placeholder="Nama Anggota"
+                                            required="" />
                                     </div>
                                     <div class="input-group">
                                         <input type="email" name="secondmemberemail" placeholder="E-Mail" required="" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" name="secondmemberaddress" placeholder="Alamat" required="" />
+                                        <input type="text" name="secondmemberaddress" placeholder="Alamat"
+                                            required="" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" name="secondmemberphone" placeholder="Nomor Telepon" required="" />
+                                        <input type="text" name="secondmembercity" placeholder="Kota" required="" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="secondmemberzip" placeholder="Kode Pos" required="" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="secondmemberphone" placeholder="Nomor Telepon"
+                                            required="" />
                                     </div>
                                     <div class="input-group">
                                         <input type="radio" name="secondmembergender" value="male"
@@ -604,7 +613,8 @@
                                 <div class="thirdMember memberBox">
                                     <h2>2nd Member</h2>
                                     <div class="input-group">
-                                        <input type="text" name="thirdmembername" placeholder="Nama Anggota" required="" />
+                                        <input type="text" name="thirdmembername" placeholder="Nama Anggota"
+                                            required="" />
                                     </div>
                                     <div class="input-group">
                                         <input type="email" name="thirdmemberemail" placeholder="E-Mail" required="" />
@@ -613,10 +623,18 @@
                                         <input type="text" name="thirdmemberaddress" placeholder="Alamat" required="" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" name="thirdmemberphone" placeholder="Nomor Telepon" required="" />
+                                        <input type="text" name="thirdmembercity" placeholder="Kota" required="" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="radio" name="thirdmembergender" value="male" id="third-gender-male" required="" />
+                                        <input type="text" name="thirdmemberzip" placeholder="Kode Pos" required="" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="thirdmemberphone" placeholder="Nomor Telepon"
+                                            required="" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="radio" name="thirdmembergender" value="male" id="third-gender-male"
+                                            required="" />
                                         <label for="third-gender-male">Laki-laki</label>
                                         <input type="radio" name="thirdmembergender" value="female"
                                             id="third-gender-female" />
