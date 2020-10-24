@@ -321,6 +321,18 @@ jQuery(document).ready(function ($) {
     setTimeout(function () {
       modalWindow.addClass("visible");
     }, delay);
+    setTimeout(function () {
+      $(".ruleContainer").css("visibility", "visible");
+      $(".ruleContainer").css("opacity", "1");
+      $(".nextBtn").css("visibility", "visible");
+      $(".nextBtn").css("opacity", "1");
+      $(".formContainer").css("visibility", "hidden");
+      $(".backBtn").css("visibility", "hidden");
+      $(".submitBtn").css("visibility", "hidden");
+      $(".formContainer").css("opacity", "0");
+      $(".backBtn").css("opacity", "0");
+      $(".submitBtn").css("opacity", "0");
+    }, 600);
   });
 
   //close modal window
@@ -346,11 +358,11 @@ jQuery(document).ready(function ($) {
       }
     );
     setTimeout(function () {
-      $(".formContainer").css("visibility", "inherit");
-      $(".ruleContainer").css("visibility", "inherit");
-      $(".nextBtn").css("visibility", "inherit");
-      $(".backBtn").css("visibility", "inherit");
-      $(".submitBtn").css("visibility", "inherit");
+      $(".formContainer").css("visibility", "hidden");
+      $(".ruleContainer").css("visibility", "hidden");
+      $(".nextBtn").css("visibility", "hidden");
+      $(".backBtn").css("visibility", "hidden");
+      $(".submitBtn").css("visibility", "hidden");
     }, 600);
   });
 

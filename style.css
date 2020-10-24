@@ -827,13 +827,16 @@ li {
 .cd-modal .modal-content {
   height: 100%;
   overflow-y: auto;
-  padding: 3em 5%;
+  padding: 1em 5%;
   color: #002833;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .cd-modal h1 {
   text-align: left;
+}
+.cd-modal h2{
+  margin-bottom: 15px;
 }
 .cd-modal .ruleContainer h1::after {
   /* ink/brush separation */
@@ -1053,7 +1056,7 @@ li {
 .registerTop .formBox {
   width: 49%;
   display: inline-block;
-  padding: 1em 3em 2em 3em;
+  padding: 1em 3em 0.5em 3em;
   background-color: #fff;
   border-radius: 4.2px;
   box-sizing: border-box;
@@ -1062,7 +1065,7 @@ li {
 .registerBot .formBox {
   width: 80%;
   display: inline-block;
-  padding: 1em 3em 2em 3em;
+  padding: 1em 3em 0.5em 3em;
   background-color: #fff;
   border-radius: 4.2px;
   box-sizing: border-box;
@@ -1181,6 +1184,13 @@ select:active {
 }
 select option {
   color: black;
+}
+
+.space-mobile {
+  display: none;
+}
+.space-desktop {
+  display: block;
 }
 .registerTop .input-group {
   width: 49%;
@@ -1350,6 +1360,10 @@ select option {
   .container-navbar-mobile {
     display: none;
   }
+
+  .section.thisyear {
+    margin: 10px !important;
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -1471,4 +1485,28 @@ select option {
   .arrow_2 .arrow.arrow--right:hover:after {
     right: 15px;
   }
+
+  .space-mobile {
+    display: block;
+  }
+  .space-desktop {
+    display: none !important;
+  }
+}
+
+.kat-download {
+  border: 2px solid #e3edf7; 
+  display: inline-block; 
+  width: auto; 
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.display-splattervid {
+  position: absolute;
+  max-width: 100%;
+  width: 700px;
+  z-index: 10;
+  top: 10vw;
+  left: 27vw;
 }
